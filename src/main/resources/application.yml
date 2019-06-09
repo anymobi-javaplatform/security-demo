@@ -1,0 +1,51 @@
+################### Logging Configuration ##########################
+logging:
+  level:
+    net:
+      chndol:
+        study:
+          mybatissample:
+            mapper: TRACE
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+################### JPA Configuration ##########################
+spring:
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 100
+        one-indexed-parameters: true
+        page-parameter: pageNo
+        prefix: ''
+        qualifier-delimiter: _
+        size-parameter: pageSize
+      sort:
+        sort-parameter: sort
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+  profiles:
+    active: dev
+
+  ################### ETC Configuration ##########################
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true

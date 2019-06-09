@@ -1,0 +1,7 @@
+POST http://localhost:8080/members
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{"email" : "onjsdnjs@gmail.com", "password" : "pass", "phoneNo" : "111-1111-1111"}
+
+###

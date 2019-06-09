@@ -1,0 +1,7 @@
+POST http://localhost:8080/login_proc
+Content-Type: application/x-www-form-urlencoded
+X-CSRF-TOKEN: 8130e778-e3c9-4d07-a1bc-5a4eb7320ed2
+
+username=onjsdnjs@gmail.com&password=pass
+
+###
